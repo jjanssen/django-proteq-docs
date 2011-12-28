@@ -1,7 +1,5 @@
-from django.conf.urls.defaults import patterns
-from django.contrib import admin
-admin.autodiscover()
+from django.conf.urls.defaults import url, patterns
 
 urlpatterns = patterns('documentation.views',
-    (r'^(?P<path>.*)$', 'documentation'),
+    url(r'^(?P<path>.*)$', 'documentation', name='index'),
 )

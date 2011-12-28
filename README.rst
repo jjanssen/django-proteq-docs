@@ -14,7 +14,7 @@ Depedencies
 
 django-documentation depends on `Sphinx <http://sphinx.pocoo.org>`_
 
-Installing django-simple-feedback
+Installing django-documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Install into your python path using pip::
@@ -29,11 +29,11 @@ Add *'documentation'* to your INSTALLED_APPS in settings.py::
         'documentation',
     )
 
-Add *'(r'^docs/', include('documentation.urls')'* to your urls:: 
+Add *'url(r'^docs/', include('documentation.urls', namespace='documentation')'* to your urls:: 
 
     urlpatterns = patterns( '',
         ....
-        (r'^docs/', include('documentation.urls'),
+        url(r'^docs/', include('documentation.urls', namespace='documentation'),
     )
 
 Settings
