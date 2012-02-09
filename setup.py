@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 METADATA = dict(
     name='django-proteq-docs',
-    version='1.0',
+    version='1.1',
 
     author='Janneke Janssen',
     author_email='j.janssen@lukkien.com',
