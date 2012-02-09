@@ -1,10 +1,10 @@
 from django.test import TestCase
 from django.test.client import Client
-from documentation.views import documentation
+from proteq_docs.views import documentation
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.contrib.auth.models import User
-from documentation import app_settings
+from proteq_docs import app_settings
 
 
 class DocumentationTest(TestCase):

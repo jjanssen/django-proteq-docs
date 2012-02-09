@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import url, patterns
 
-urlpatterns = patterns('documentation.views',
+urlpatterns = patterns('proteq_docs.views',
     url(r'^(?P<path>.*)$', 'documentation', name='index'),
 )

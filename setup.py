@@ -3,26 +3,26 @@ from setuptools import setup, find_packages
 
 
 METADATA = dict(
-    name='django-documentation',
+    name='django-proteq-docs',
     version='1.0',
 
-    author='Nicolas Patry',
-    author_email='nicolas@kwyk.fr',
+    author='Janneke Janssen',
+    author_email='j.janssen@lukkien.com',
 
     description="""Provides a way to integrate a protected sphinx based
     documentation within your django app.""",
     long_description=open('README.rst').read(),
 
-    url='http://github.com/Narsil/django-documentation',
-    download_url='http://github.com/Narsil/django-documentation',
+    url='http://github.com/jjanssen/django-proteq-docs',
+    download_url='http://github.com/jjanssen/django-proteq-docs',
 
-    install_requires=['Sphinx>=1.0.7', ],
+    install_requires=[],
 
     include_package_data=True,
 
     packages=find_packages(),
 
-    keywords='django documentation sphinx authentification',
+    keywords='django documentation authentification',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

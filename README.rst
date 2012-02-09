@@ -1,39 +1,34 @@
 =====================================
-Django-documentation
+Django ProteQ Docs
 =====================================
 
 This `Django <http://djangoproject.com>`_ app has for purpose to integrate
-protected sphinx based documentation .
+protected Sphinx based proteq_docs. Based on `django-documentation 
+<https://github.com/Narsil/django-documentation>`_.
 
 
 Installation 
 ============
 
-Depedencies  
-~~~~~~~~~~~
-
-django-documentation depends on `Sphinx <http://sphinx.pocoo.org>`_
-
-Installing django-documentation
+Installing django-proteq-docs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Install into your python path using pip::
 
-    pip install django-documentation
-    pip install -e git+git://github.com/Narsil/django-documentation.git#egg=django-documentation
+    pip install -e git+http://github.com/jjanssen/django-proteq-docs.git#egg=django-proteq-docs
 
-Add *'documentation'* to your INSTALLED_APPS in settings.py::
+Add *'proteq_docs'* to your INSTALLED_APPS in settings.py::
 
     INSTALLED_APPS = (
         ...
-        'documentation',
+        'proteq_docs',
     )
 
-Add *'url(r'^docs/', include('documentation.urls', namespace='documentation')'* to your urls:: 
+Add *'url(r'^docs/', include('proteq_docs.urls', namespace='documentation')'* to your urls:: 
 
     urlpatterns = patterns( '',
         ....
-        url(r'^docs/', include('documentation.urls', namespace='documentation'),
+        url(r'^docs/', include('proteq_docs.urls', namespace='documentation'),
     )
 
 Settings
@@ -47,21 +42,9 @@ staticfiles would be better suited for this task. ::
     DOCUMENTATION_ROOT = '/path/to/docs/'
     DOCUMENTATION_ACCESS_FUNCTION = lambda user: user.is_staff
 
-The DOCUMENATION_ROOT is the root of your sphinx doc where the Makefile exists, if you html docs is 
-placed somewhere else than ``DOCUMENTATION_ROOT + '_build/html/'`` then you
-can override it with::
-
-    DOCUMENTATION_HTML_ROOT = '/my/other/location/
-
-Note that django-documentation serves the content via x-sendfile when DEBUG
+Note that django-proteq-docs serves the content via x-sendfile when DEBUG
 is False, otherwise it uses 
 `django.views.static.serve <https://docs.djangoproject.com/en/dev/howto/static-files/#django.views.static.serve>`_
 To override use ::
 
     DOCUMENTATION_XSENDFILE = True
-
-django-documentation also comes with a command goodies ::
-
-    ./manage.py makedoc
-        
-to generate the documentation.

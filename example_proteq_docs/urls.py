@@ -8,7 +8,7 @@ from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('',
     # Examples:
     url('^$', direct_to_template, {'template': 'base.html'}),
-    url(r'^documentation/', include('documentation.urls')),
+    url(r'^documentation/', include('proteq_docs.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
