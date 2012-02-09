@@ -1,6 +1,6 @@
 from django.conf import settings
 
-DOCUMENTATION_ROOT = getattr(settings, 'DOCUMENTATION_ROOT', None)
+DOCUMENTATION_ROOT = getattr(settings, 'DOCUMENTATION_ROOT', '/static/docs/')
 DOCUMENTATION_ACCESS_FUNCTION = getattr(settings, 'DOCUMENTATION_ACCESS_FUNCTION', None)
 
 if not DOCUMENTATION_ROOT:
