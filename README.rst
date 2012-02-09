@@ -39,7 +39,7 @@ and returns **True** if user is allowed to see the doc. If you plan on using
 ``lambda user: True``, then you probably should not be using this app, as
 staticfiles would be better suited for this task. ::
 
-    DOCUMENTATION_ROOT = '/path/to/docs/'
+    DOCUMENTATION_ROOT = '/static/docs/'
     DOCUMENTATION_ACCESS_FUNCTION = lambda user: user.is_staff
 
 Note that django-proteq-docs serves the content via x-sendfile when DEBUG
