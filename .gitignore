@@ -6,3 +6,7 @@
 
 # damn you DS_STORE
 .DS_Store
+
+# Prevent adding of dist
+dist/
+*.egg-info
