@@ -4,3 +4,5 @@
 # temporary files from vim
 *.swp
 
+# damn you DS_STORE
+.DS_Store
